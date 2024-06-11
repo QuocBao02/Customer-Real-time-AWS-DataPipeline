@@ -7,7 +7,7 @@
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
 
     <title>Running Data Pipeline and Visualization Redshift Data :: AWS System Manager</title>
 
@@ -537,12 +537,12 @@
 <h2 id="run-all-the-steps-of-data-pipeline">Run all the steps of Data Pipeline.</h2>
 <ol>
 <li>Run Data Generator
-<img src="images/Lambda/1.png" alt="image"></li>
+<img src="/images/Lambda/1.png" alt="image"></li>
 <li>Data is stored in <strong>S3 data lake</strong>.
-<img src="images/Lambda/2.png" alt="image">
-<img src="images/Lambda/3.png" alt="image"></li>
+<img src="/images/Lambda/2.png" alt="image">
+<img src="/images/Lambda/3.png" alt="image"></li>
 <li>Data is stored in <strong>Redshift datawarehouse</strong>.
-<img src="images/Lambda/4.png" alt="image"></li>
+<img src="/images/Lambda/4.png" alt="image"></li>
 </ol>
 <h2 id="redshift-chart">Redshift Chart</h2>
 <ol>
@@ -551,25 +551,25 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> gender, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> amount
 <span style="color:#66d9ef">from</span> customers
 <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> gender;
-</code></pre></div><p><img src="images/Redshift_Visualize/1.png" alt="image">
+</code></pre></div><p><img src="/images/Redshift_Visualize/1.png" alt="image">
 2. Top 10 Products by Sales</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> product_name, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>)
 <span style="color:#66d9ef">from</span> products
 <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> product_name
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">desc</span>
 <span style="color:#66d9ef">limit</span> <span style="color:#ae81ff">10</span>;
-</code></pre></div><p><img src="images/Redshift_Visualize/2.png" alt="image">
+</code></pre></div><p><img src="/images/Redshift_Visualize/2.png" alt="image">
 3. Number of Sales Over Time</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> purchase_date, amount
 <span style="color:#66d9ef">from</span> transactions
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> purchase_date;
-</code></pre></div><p><img src="images/Redshift_Visualize/3.png" alt="image">
+</code></pre></div><p><img src="/images/Redshift_Visualize/3.png" alt="image">
 4. Age distribution of Customers</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> age, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>)
 <span style="color:#66d9ef">from</span> customers
 <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> age
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> age;
-</code></pre></div><p><img src="images/Redshift_Visualize/4.png" alt="image"></p>
+</code></pre></div><p><img src="/images/Redshift_Visualize/4.png" alt="image"></p>
 
 
 
