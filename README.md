@@ -19,8 +19,8 @@ This project aims to build a real-time data pipeline for customer data on an e-c
 ![Infrastructure](/images/Overview/overview.jpg) 
 
 ### Table of Contents
-1. [Introduction ](/content/1-Introduce/)
-2. [Kinesis Data Ingesion](/content/2-Kinesis/)
-3. [Lambda Data Processing](/content/3-Lambda/)
-4. [Running Data Pipeline and Visualization Redshift Data](/content/4-RedshiftVisualize/)
-5. [Clean up resources](/content/5-Cleanup/)
+1. [Introduction ](/content/1-Introduce)
+2. [Kinesis Data Ingesion](/content/2-Kinesis)
+3. [Lambda Data Processing](/content/3-Lambda)
+4. [Running Data Pipeline and Visualization Redshift Data](/content/4-RedshiftVisualize)
+5. [Clean up resources](/content/5-Cleanup)
