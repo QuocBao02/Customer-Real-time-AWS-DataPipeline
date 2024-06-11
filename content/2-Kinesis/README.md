@@ -18,6 +18,6 @@ pre : " <b> 2. </b> "
 
 
 ## Contents
-1. [Create AWS Access Key](accesskey)
-2. [Generate Customer Data](generatedata)
-3. [Create Kinesis Stream Key](kinesisstreamkey)
+1. [Create AWS Access Key](AccessKey)
+2. [Generate Customer Data](GenerateData)
+3. [Create Kinesis Stream Key](KinesisStreamKey)
