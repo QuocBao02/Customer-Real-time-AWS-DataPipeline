@@ -7,7 +7,7 @@
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
     <title>Create Kinesis Stream Key :: AWS System Manager</title>
 
@@ -543,17 +543,17 @@
 	<h3 id="create-kinesis-stream-key">Create Kinesis Stream Key</h3>
 <ol>
 <li>Return to your AWS account and type <strong>Kinesis</strong> in the search box to create a stream.
-<img src="/images/Kinesis/10.png" alt="image"></li>
+<img src="images/Kinesis/10.png" alt="image"></li>
 <li>Select <strong>Kinesis Data Stream</strong> and click <strong>Create data stream</strong>
-<img src="/images/Kinesis/11.png" alt="image"></li>
+<img src="images/Kinesis/11.png" alt="image"></li>
 <li>Stream key name is : <code>CustomersDataStream</code>, Select <strong>Provisioned</strong> data stream capacity and <strong>Provisioned shards</strong> is <strong>1</strong>. Click <strong>Create data stream</strong>.
-<img src="/images/Kinesis/12.png" alt="image"></li>
+<img src="images/Kinesis/12.png" alt="image"></li>
 <li><strong>CustomersDataStream</strong> is created and actived.
-<img src="/images/Kinesis/13.png" alt="image"></li>
+<img src="images/Kinesis/13.png" alt="image"></li>
 <li>Run the Data Generator by executing the <code>python fakedata.py</code> file and then view the results.
-<img src="/images/Kinesis/14.png" alt="image"></li>
+<img src="images/Kinesis/14.png" alt="image"></li>
 <li>Let&rsquo;s open the Amazon Kines console and check if the  <strong>CustomersDataStream</strong> you created previously exists.  In Data Viewer, select the shard <strong>shardid-00000000000</strong>, and set <strong>Starting posistion</strong> to <strong>Trim horizon</strong>. Click <strong>Get records</strong> to view the incoming data.
-<img src="/images/Kinesis/15.png" alt="image"></li>
+<img src="images/Kinesis/15.png" alt="image"></li>
 </ol>
 
 

@@ -7,7 +7,7 @@
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
     <title>Load Data From Kinesis to S3 :: AWS System Manager</title>
 
@@ -556,20 +556,20 @@
 <li>Go to <a href="https://us-east-1.console.aws.amazon.com/iam/home">IAM service management console</a>
 <ul>
 <li>Select <strong>Create role</strong> to create new role for Lambda function.
-<img src="/images/Lambda/Lambda-to-S3/1.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/1.png" alt="image"></li>
 <li>Select <strong>Lambda</strong> for <strong>AWS service</strong>, then click <strong>Next</strong>.
-<img src="/images/Lambda/Lambda-to-S3/2.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/2.png" alt="image"></li>
 <li>Add <strong>CloudwatchFullAccess</strong> to <strong>Permission policies</strong>.
-<img src="/images/Lambda/Lambda-to-S3/3.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/3.png" alt="image"></li>
 <li>Add <strong>AmazonS3FullAccess</strong> to <strong>Permission policies</strong>.
-<img src="/images/Lambda/Lambda-to-S3/4.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/4.png" alt="image"></li>
 <li>Add <strong>AmazonKinesisFullAccess</strong> to <strong>Permission policies</strong>.
-<img src="/images/Lambda/Lambda-to-S3/5.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/5.png" alt="image"></li>
 <li>Add <strong>AmazonRedshiftFullAccess</strong> to <strong>Permission policies</strong>.
-<img src="/images/Lambda/Lambda-to-S3/6.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/6.png" alt="image"></li>
 <li>Set <strong>Role name</strong> is <strong>full-customer-data-stream-role</strong> and click <strong>Create role</strong>.
-<img src="/images/Lambda/Lambda-to-S3/7.png" alt="image">
-<img src="/images/Lambda/Lambda-to-S3/8.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/7.png" alt="image">
+<img src="images/Lambda/Lambda-to-S3/8.png" alt="image"></li>
 </ul>
 </li>
 </ol>
@@ -579,10 +579,10 @@
 <ul>
 <li>Select <strong>Create bucket</strong> to create new bucket.</li>
 <li>Set <strong>Bucket name</strong> is <strong>customer-data-datalake-quocbao</strong>, It must be unique within the global namespace and follow the bucket naming rules. Then, Click <strong>Create bucket</strong>.
-<img src="/images/Lambda/Lambda-to-S3/16.png" alt="image">
-<img src="/images/Lambda/Lambda-to-S3/17.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/16.png" alt="image">
+<img src="images/Lambda/Lambda-to-S3/17.png" alt="image"></li>
 <li>Well done!, S3 bucket is created!
-<img src="/images/Lambda/Lambda-to-S3/18.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/18.png" alt="image"></li>
 </ul>
 </li>
 </ol>
@@ -591,9 +591,9 @@
 <li>Go to <a href="https://us-east-1.console.aws.amazon.com/lambda/home">Lambda service management console</a>
 <ul>
 <li>Select <strong>Create a function</strong> to create new lambda function.
-<img src="/images/Lambda/Lambda-to-S3/10.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/10.png" alt="image"></li>
 <li>Set <strong>Function name</strong> is <strong>kinesis_event_processor_to_s3</strong>, <strong>Runtime type</strong> is <strong>Python 3.12</strong>, <strong>Architecture</strong> is <strong>x86_64</strong>. Select <strong>Use an existing role</strong> to set my lambda role was create before. Then click <strong>Create function</strong>.
-<img src="/images/Lambda/Lambda-to-S3/11.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/11.png" alt="image"></li>
 </ul>
 </li>
 <li>Add lambda function code.
@@ -636,14 +636,14 @@
         <span style="color:#66d9ef">return</span> {
             <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">200</span>
         }
-</code></pre></div><img src="/images/Lambda/Lambda-to-S3/12.png" alt="image"></li>
+</code></pre></div><img src="images/Lambda/Lambda-to-S3/12.png" alt="image"></li>
 <li>Add trigger to Lambda function
-<img src="/images/Lambda/Lambda-to-S3/13.png" alt="image">
+<img src="images/Lambda/Lambda-to-S3/13.png" alt="image">
 <ul>
 <li>Select <strong>Add trigger</strong> and choose <strong>Kinesis</strong> source.
-<img src="/images/Lambda/Lambda-to-S3/14.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/14.png" alt="image"></li>
 <li>Set <strong>Kinesis stream</strong> is <strong>kinesis/CustomersDataStream</strong>, the kinesis stream key was created before. <strong>Batch size</strong> is 1. Click <strong>Add</strong> to finish add trigger for <strong>kinesis_event_processor_to_s3</strong>
-<img src="/images/Lambda/Lambda-to-S3/15.png" alt="image"></li>
+<img src="images/Lambda/Lambda-to-S3/15.png" alt="image"></li>
 </ul>
 </li>
 </ol>
